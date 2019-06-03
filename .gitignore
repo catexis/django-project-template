@@ -79,6 +79,9 @@ target/
 #PyCharm
 .idea/
 
+#PyCharm
+.vscode/
+
 # pyenv
 .python-version
 
@@ -99,3 +102,5 @@ ENV/
 # Rope project settings
 .ropeproject
 
+# Debug files
+debug*

@@ -4,12 +4,12 @@ from django.contrib import admin
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
 
-from website.views import ContactView
+from website.views import ContactView, IndexView
 from website.views import UserProfileView
 
 
 urlpatterns = [
-    url(r'^$', TemplateView.as_view(template_name='website/index.html'), name='homepage'),
+    url(r'^$', IndexView.as_view(), name='homepage'),
     url(r'^about/$', TemplateView.as_view(template_name="website/about.html"), name='about'),
     url(r'^contact/$', ContactView.as_view(), name='contact'),
     url(r'^contribute/$', TemplateView.as_view(template_name="website/contribute.html"), name='contribute'),
